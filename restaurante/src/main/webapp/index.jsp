@@ -13,46 +13,73 @@
 
 <title>Restaurante</title>
 <style type="text/css">
-
-form{
-position: absolute;
-top: 40%;
-left: 35%;
-
+form {
+	position: absolute;
+	top: 40%;
+	left: 35%;
 }
 
-
-h2{
-position: absolute;
-top: 30%;
-left: 42%;
-color: olive;
+h2 {
+	position: absolute;
+	top: 30%;
+	left: 42%;
+	color: olive;
 }
-
 </style>
 
 </head>
 <body>
+	<div class="alert alert-secondary" role="alert">Tela de Login</div>
 	<h2>Restaurante Juliana</h2>
-	
-	<form action="ServletLogin" method="post" class="row g-3">
+
+	<form action="ServletLogin" method="post"
+		class="row g-3 needs-validation" novalidate>
 		<input type="hidden" value="<%=request.getParameter("url")%>"
 			name="url">
 
-		<div class="col-md-6">
-			<label class="form-label"> Login </label> 
-			<input class="form-control" name="campoUsuario" type="text">
+		<div class="mb-3">
+			<label for="validationCustom01" class="form-label"> Login </label> <input
+				class="form-control" name="campoUsuario" id="validationCustom01"
+				type="text" required>
+			<div class="invalid-feedback">Campo obrigatório</div>
+			<div class="valid-feedback">Bom!</div>
 		</div>
-		<div class="col-md-6">
-			<label class="form-label"> Senha</label> 
-			<input class="form-control" name="campoSenha" type="password">
+		<div class="mb-3">
+			<label for="validationCustom02" class="form-label"> Senha</label> <input
+				class="form-control" name="campoSenha" id="validationCustom02"
+				type="password" required>
+			<div class="invalid-feedback">Campo obrigatório</div>
+			<div class="valid-feedback">Bom!</div>
 		</div>
-    		<input type="submit" value="Acessar" class="btn btn-primary">
+		<input type="submit" value="Acessar" class="btn btn-primary">
 	</form>
 	<h4>${msg}</h4>
 	<script
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-		crossorigin="anonymous"></script>
+		crossorigin="anonymous">
+		
+	</script>
+
+	<script type="text/javascript">
+(() => {
+	  'use strict'
+
+	  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+	  const forms = document.querySelectorAll('.needs-validation')
+
+	  // Loop over them and prevent submission
+	  Array.from(forms).forEach(form => {
+	    form.addEventListener('submit', event => {
+	      if (!form.checkValidity()) {
+	        event.preventDefault()
+	        event.stopPropagation()
+	      }
+
+	      form.classList.add('was-validated')
+	    }, false)
+	  })
+	})()
+</script>
 </body>
 </html>
