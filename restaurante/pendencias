@@ -1,0 +1,2 @@
+se o usuário tentar acessar a página principal direto do google, o Voltar da mensagem
+	de erro retorna pra página do google ao invés do login
