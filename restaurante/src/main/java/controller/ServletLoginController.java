@@ -25,7 +25,17 @@ public class ServletLoginController extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		doPost(request,response);
+		
+		String acao = request.getParameter("acao");
+		
+		if(acao != null && !acao.isEmpty() && acao.equalsIgnoreCase("Logout")) {
+			request.getSession().invalidate();
+			RequestDispatcher redireciona = request.getRequestDispatcher("index.jsp");
+			redireciona.forward(request, response);
+		}else 
+			doPost(request, response);
+		
+		
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -45,6 +55,7 @@ public class ServletLoginController extends HttpServlet {
 				if (usuario.getLogin().equals("admin") && usuario.getSenha().equals("admin")) {
 
 					request.getSession().setAttribute("usuario", usuario);
+					request.getSession().setAttribute("nome-usuario", usuario.getLogin());
 
 					if (url == null || url.equals("null")) {
 						url = "/principal/principal.jsp";
