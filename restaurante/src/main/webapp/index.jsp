@@ -32,7 +32,7 @@ h2 {
 	<div class="alert alert-secondary" role="alert">Tela de Login</div>
 	<h2>Restaurante Juliana</h2>
 
-	<form action="ServletLogin" method="post"
+	<form action="<%= request.getContextPath() %>/ServletLogin" method="post"
 		class="row g-3 needs-validation" novalidate>
 		<input type="hidden" value="<%=request.getParameter("url")%>"
 			name="url">

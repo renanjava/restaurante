@@ -8,7 +8,7 @@
 	<div class="pcoded-inner-navbar main-menu">
 		<div class="">
 			<div class="main-menu-header">
-				<img class="img-80 img-radius" src="assets/images/avatar-4.jpg"
+				<img class="img-80 img-radius" src="<%= request.getContextPath() %>/assets/images/avatar-4.jpg"
 					alt="User-Profile-Image">
 				<div class="user-details">
 					<span id="more-details"><%= request.getSession().getAttribute("nome-usuario") %><i class="fa fa-caret-down"></i></span>
@@ -20,7 +20,7 @@
 					<li class="more-details"><a href="user-profile.html"><i
 							class="ti-user"></i>View Profile</a> <a href="#!"><i
 							class="ti-settings"></i>Settings</a> <a
-						href="ServletLogin?acao=Logout"><i
+						href="<%= request.getContextPath() %>/ServletLogin?acao=Logout"><i
 							class="ti-layout-sidebar-left"></i>Logout</a></li>
 				</ul>
 			</div>
@@ -51,68 +51,12 @@
 					class="pcoded-mcaret"></span>
 			</a>
 				<ul class="pcoded-submenu">
-					<li class=" "><a href="accordion.html"
+					<li class=" "><a href="<%= request.getContextPath() %>/principal/cadastro-usuario.jsp"
 						class="waves-effect waves-dark"> <span class="pcoded-micon"><i
 								class="ti-angle-right"></i></span> <span class="pcoded-mtext"
-							data-i18n="nav.basic-components.alert">Accordion</span> <span
+							data-i18n="nav.basic-components.alert">Cadastro Usuário</span> <span
 							class="pcoded-mcaret"></span>
 					</a></li>
-					<li class=" "><a href="breadcrumb.html"
-						class="waves-effect waves-dark"> <span class="pcoded-micon"><i
-								class="ti-angle-right"></i></span> <span class="pcoded-mtext"
-							data-i18n="nav.basic-components.breadcrumbs">Breadcrumbs</span> <span
-							class="pcoded-mcaret"></span>
-					</a></li>
-					<li class=" "><a href="button.html"
-						class="waves-effect waves-dark"> <span class="pcoded-micon"><i
-								class="ti-angle-right"></i></span> <span class="pcoded-mtext"
-							data-i18n="nav.basic-components.alert">Button</span> <span
-							class="pcoded-mcaret"></span>
-					</a></li>
-					<li class=" "><a href="tabs.html"
-						class="waves-effect waves-dark"> <span class="pcoded-micon"><i
-								class="ti-angle-right"></i></span> <span class="pcoded-mtext"
-							data-i18n="nav.basic-components.breadcrumbs">Tabs</span> <span
-							class="pcoded-mcaret"></span>
-					</a></li>
-					<li class=" "><a href="color.html"
-						class="waves-effect waves-dark"> <span class="pcoded-micon"><i
-								class="ti-angle-right"></i></span> <span class="pcoded-mtext"
-							data-i18n="nav.basic-components.alert">Color</span> <span
-							class="pcoded-mcaret"></span>
-					</a></li>
-					<li class=" "><a href="label-badge.html"
-						class="waves-effect waves-dark"> <span class="pcoded-micon"><i
-								class="ti-angle-right"></i></span> <span class="pcoded-mtext"
-							data-i18n="nav.basic-components.breadcrumbs">Label Badge</span> <span
-							class="pcoded-mcaret"></span>
-					</a></li>
-					<li class=" "><a href="tooltip.html"
-						class="waves-effect waves-dark"> <span class="pcoded-micon"><i
-								class="ti-angle-right"></i></span> <span class="pcoded-mtext"
-							data-i18n="nav.basic-components.alert">Tooltip</span> <span
-							class="pcoded-mcaret"></span>
-					</a></li>
-					<li class=" "><a href="typography.html"
-						class="waves-effect waves-dark"> <span class="pcoded-micon"><i
-								class="ti-angle-right"></i></span> <span class="pcoded-mtext"
-							data-i18n="nav.basic-components.breadcrumbs">Typography</span> <span
-							class="pcoded-mcaret"></span>
-					</a></li>
-					<li class=" "><a href="notification.html"
-						class="waves-effect waves-dark"> <span class="pcoded-micon"><i
-								class="ti-angle-right"></i></span> <span class="pcoded-mtext"
-							data-i18n="nav.basic-components.alert">Notification</span> <span
-							class="pcoded-mcaret"></span>
-					</a></li>
-					<li class=" "><a href="icon-themify.html"
-						class="waves-effect waves-dark"> <span class="pcoded-micon"><i
-								class="ti-angle-right"></i></span> <span class="pcoded-mtext"
-							data-i18n="nav.basic-components.breadcrumbs">Themify</span> <span
-							class="pcoded-mcaret"></span>
-					</a></li>
-
-				</ul></li>
 		</ul>
 		<div class="pcoded-navigation-label" data-i18n="nav.category.forms">Forms
 			&amp; Tables</div>

@@ -44,7 +44,9 @@ public class FilterAutenticacao extends HttpFilter {
 		ModelLogin usuarioLogado = (ModelLogin) sessao.getAttribute("usuario");
 		String urlAutenticar = requisicao.getServletPath();
 		
-		try {
+		/*
+		 try {
+		 
 
 			if ((usuarioLogado == null
 					|| (usuarioLogado.getLogin().equals("null") || usuarioLogado.getSenha().equals("null")))
@@ -53,9 +55,10 @@ public class FilterAutenticacao extends HttpFilter {
 				throw new UsuarioNaoEstaLogado();
 
 			else 
+			*/
 				chain.doFilter(request, response);
 			
-			
+				/*
 			conexao.commit();
 			
 		} catch (UsuarioNaoEstaLogado e) {
@@ -72,6 +75,7 @@ public class FilterAutenticacao extends HttpFilter {
 				e1.printStackTrace();
 			}
 		}
+		*/
 	}
 
 	public void init(FilterConfig fConfig) throws ServletException {
