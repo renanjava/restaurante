@@ -13,4 +13,14 @@
   <welcome-file-list>
     <welcome-file>index.jsp</welcome-file>
   </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>ServletCadastroController</display-name>
+    <servlet-name>ServletCadastroController</servlet-name>
+    <servlet-class>controller.ServletCadastroController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ServletCadastroController</servlet-name>
+    <url-pattern>/ServletCadastroController</url-pattern>
+  </servlet-mapping>
 </web-app>

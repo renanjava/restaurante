@@ -39,25 +39,30 @@
 														<h5>Cadastro de Usuário</h5>
 													</div>
 													<div class="card-block">
-														<form class="form-material">
+														<form class="form-material" action="<%= request.getContextPath() %>/ServletCadastro" method="post">
 															<div class="form-group form-default">
-																<input type="text" name="footer-email"
-																	class="form-control" required=""> <span
+																<input type="text" name="id" id="id" readonly="readonly"
+																	class="form-control"> <span
 																	class="form-bar"></span> <label class="float-label">ID</label>
 															</div>
 															<div class="form-group form-default">
-																<input type="text" name="footer-email"
-																	class="form-control" required=""> <span
+																<input type="text" name="nome" id="nome" autocomplete="off"
+																	class="form-control" required="required"> <span
 																	class="form-bar"></span> <label class="float-label">Nome</label>
 															</div>
 															<div class="form-group form-default">
-																<input type="text" name="footer-email"
-																	class="form-control" required=""> <span
+																<input type="text" name="email" id="email" autocomplete="off"
+																	class="form-control" required="required"> <span
 																	class="form-bar"></span> <label class="float-label">Email</label>
 															</div>
 															<div class="form-group form-default">
-																<input type="password" name="footer-email"
-																	class="form-control" required=""> <span
+																<input type="text" name="login" id="login" autocomplete="off"
+																	class="form-control" required="required"> <span
+																	class="form-bar"></span> <label class="float-label">Login</label>
+															</div>
+															<div class="form-group form-default">
+																<input type="password" name="senha" id="senha" autocomplete="off"
+																	class="form-control" required="required"> <span
 																	class="form-bar"></span> <label class="float-label">Senha</label>
 															</div>
 															<button class="btn btn-success waves-effect waves-light">Cadastrar</button>
