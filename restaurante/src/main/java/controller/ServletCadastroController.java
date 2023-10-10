@@ -30,6 +30,8 @@ public class ServletCadastroController extends HttpServlet {
 		modelLogin.setLogin(request.getParameter("login"));
 		modelLogin.setSenha(request.getParameter("senha"));
 		
+		request.setAttribute("ModelLogin", modelLogin);
+
 		RequestDispatcher redireciona = request.getRequestDispatcher("principal/cadastro-usuario.jsp");
 		redireciona.forward(request,response);
 	}

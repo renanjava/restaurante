@@ -1,0 +1,10 @@
+CREATE TABLE public."USUARIO"
+(
+  "ID" bigint NOT NULL,
+  "LOGIN" character varying(255),
+  "SENHA" character varying(255),
+  "NOME" character varying(255),
+  "EMAIL" character varying(255),
+  CONSTRAINT "ID_PK" PRIMARY KEY ("ID"),
+  CONSTRAINT "UNIQUE_EMAIL" UNIQUE ("EMAIL")
+)
